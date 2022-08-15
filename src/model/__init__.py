@@ -16,7 +16,7 @@ class Model(nn.Module):
         self.chop = args.chop
         self.precision = args.precision
         self.cpu = args.cpu
-        self.device = torch.device('cpu' if args.cpu else 'cuda')
+        self.device = torch.device('cpu') # torch.device('cpu' if args.cpu else 'cuda')
         self.n_GPUs = args.n_GPUs
         self.save_models = args.save_models
 
@@ -97,9 +97,10 @@ class Model(nn.Module):
             )
         elif resume == 0:
             if pre_train != '.':
+                pre_train = 'C:/Users/yafes.sahiner/Documents/GitHub/experiment/test/model/model_x4.pt'
                 print('Loading model from {}'.format(pre_train))
                 self.get_model().load_state_dict(
-                    torch.load(pre_train, **kwargs),
+                    torch.load(pre_train,map_location=torch.device('cpu'), **kwargs),
                     strict=False
                 )
         else:

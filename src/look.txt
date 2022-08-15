@@ -4,7 +4,7 @@
     c- _model   --> args, checkpoint
     d- _loss    --> args
     e- checkpoint-> utility,args
-    
+
 2) args
 --dir_data
 --data_test
@@ -18,7 +18,8 @@
 --save_results
 --save_gt
 
+python main.py --dir_data C:\Users\yafes.sahiner\Documents\GitHub --model NLSN  --chunk_size 144 --data_test Set5 --n_hashes 4 --chop --save_results --rgb_range 1 --data_range 801-900 --scale 4 --n_feats 256 --n_resblocks 32 --res_scale 0.1  --pre_train model_x4.pt --test_only 
 
-python main.py --dir_data ../../ --model NLSN  --chunk_size 144 --data_test Set5+Set14+B100+Urban100 --n_hashes 4 --chop --save_results --rgb_range 1 --data_range 801-900 --scale 2 --n_feats 256 --n_resblocks 32 --res_scale 0.1  --pre_train model_x2.pt --test_only 
 
-C:\Users\yafes.sahiner\Documents\GitHub\Non-Local-Sparse-Attention\src\input.txt
+
+
