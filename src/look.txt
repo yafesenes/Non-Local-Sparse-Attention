@@ -1,0 +1,14 @@
+1) Trainer class
+    a- args     --> option
+    b- loader   --> args
+    c- _model   --> args, checkpoint
+    d- _loss    --> args
+    e- checkpoint-> utility,args
+    
+2) args nedir?
+--dir_data
+--data_test
+--data_range
+--model
+
+
